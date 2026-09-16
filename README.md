@@ -178,30 +178,33 @@ Deployment is not complete until the Render service and Vercel project have been
 - Confirm protected endpoints reject missing or invalid tokens
 - Run the frontend production build with `npm run build`
 
-## 15. Day 8 status
+## 15. Project structure
 
-Day 8 status: Complete
+```text
+client/
+	src/components/   Reusable opportunity UI
+	src/config/       Frontend API configuration
+	src/pages/        Public and administrator screens
+	vercel.json       SPA fallback for direct route navigation
+server/
+	config/           MongoDB connection setup
+	controllers/      Authentication, opportunity, and application logic
+	middleware/       JWT protection and error handling
+	models/           Mongoose schemas
+	routes/           REST endpoint definitions
+```
 
-Implemented:
-- admin login API
-- JWT issuance and verification
-- protected admin routes and APIs
-- admin login page
-- token storage in localStorage
-- redirect to login when no token exists
-- admin logout
+## 16. Testing summary
 
-## 16. Day 9 status
+The deployed application has been smoke-tested for public browsing, combined search and filtering, detail navigation, application validation and submission, admin authentication, protected API behavior, opportunity CRUD, CORS, MongoDB persistence, responsive layouts, and the frontend production build.
 
-Day 9 status: Complete
+The exact verification notes and known limitations are in [PROJECT_REPORT.md](PROJECT_REPORT.md). Presentation material is in [PRESENTATION_CONTENT.md](PRESENTATION_CONTENT.md), and the safe capture list is in [SCREENSHOT_CHECKLIST.md](SCREENSHOT_CHECKLIST.md).
 
-Improved:
-- navigation and admin layout
-- card and table styling
-- form spacing and validation feedback
-- loading, success, and error states
-- responsive behavior and accessibility basics
+## 17. Live deployment
 
-## 17. Current project status
+- Frontend: https://internship-job-portal-green.vercel.app/
+- Backend/API: https://internship-job-portal-backend-o39r.onrender.com/
 
-The portal is prepared for local production-readiness verification. Atlas connectivity, API authentication, CRUD cleanup, and the frontend production build have been verified locally. Live Render and Vercel deployment remain manual steps.
+## 18. Future enhancements
+
+Automated test coverage, application moderation and export, pagination, and multiple administrator roles are reasonable future enhancements. They are intentionally outside the current implementation scope.

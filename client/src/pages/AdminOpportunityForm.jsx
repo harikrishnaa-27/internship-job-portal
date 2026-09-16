@@ -77,7 +77,7 @@ function AdminOpportunityForm() {
   }
 
   const validateForm = () => {
-    for (const [key, value] of Object.entries(formData)) {
+    for (const value of Object.values(formData)) {
       if (!String(value).trim()) {
         return 'Please fill in all required fields.'
       }

@@ -31,6 +31,10 @@ const getOpportunityById = async (req, res, next) => {
       return
     }
 
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ message: 'Invalid opportunity ID.' })
+    }
+
     const opportunity = await Opportunity.findById(req.params.id)
 
     if (!opportunity) {
@@ -85,6 +89,10 @@ const updateOpportunity = async (req, res, next) => {
       return
     }
 
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ message: 'Invalid opportunity ID.' })
+    }
+
     const opportunity = await Opportunity.findById(req.params.id)
 
     if (!opportunity) {
@@ -107,6 +115,10 @@ const deleteOpportunity = async (req, res, next) => {
   try {
     if (checkDatabaseAvailability(res)) {
       return
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ message: 'Invalid opportunity ID.' })
     }
 
     const opportunity = await Opportunity.findById(req.params.id)

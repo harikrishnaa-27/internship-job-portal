@@ -1,6 +1,28 @@
-# React + Vite
+# Internship & Job Listing Portal - Frontend
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+
+## Commands
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+The frontend reads `VITE_API_URL` at build time. For local development, create `client/.env` with a local backend URL. For production, configure the deployed Render API URL in Vercel.
+
+## Main routes
+
+- `/` - public opportunity search and filtering
+- `/opportunities/:id` - opportunity details
+- `/opportunities/:id/apply` - application form
+- `/admin/login` - administrator login
+- `/admin` - protected opportunity management
+- `/admin/applications` - protected application review
+
+<!-- The remaining template notes are retained for the local Vite toolchain. -->
 
 Currently, two official plugins are available:
 
