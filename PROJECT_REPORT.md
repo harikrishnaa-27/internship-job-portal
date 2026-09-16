@@ -125,7 +125,7 @@ The live deployment was verified for:
 - Frontend production build with `npm run build`.
 - Live Vercel to Render API communication and CORS.
 
-A QA application was submitted with an identifiable test student record to verify persistence. Because the current API has no application-delete operation, the record remains available for administrator review rather than being removed through an unsafe or unrelated mechanism.
+A QA application was submitted with an identifiable test student record to verify persistence, then the exact QA record was removed directly from Atlas after verification because the current API has no application-delete operation. No legitimate application records were targeted.
 
 ## Results
 
